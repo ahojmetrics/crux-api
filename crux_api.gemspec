@@ -3,7 +3,7 @@
 require_relative "lib/crux_api/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "CrUX API"
+  spec.name = "crux_api"
   spec.version = CruxApi::VERSION
   spec.authors = ["Yuri Tománek"]
   spec.email = ["yuri@tomanek.co.uk"]
