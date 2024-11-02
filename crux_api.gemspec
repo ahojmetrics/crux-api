@@ -3,20 +3,20 @@
 require_relative "lib/crux_api/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "crux_api"
+  spec.name = "CrUX API"
   spec.version = CruxApi::VERSION
   spec.authors = ["Yuri Tománek"]
   spec.email = ["yuri@tomanek.co.uk"]
 
   spec.summary = "A wrapper for the CrUX API"
   spec.description = "A simple wrapper for the Google CrUX API"
-  spec.homepage = "https://github.com/ahojmetrics/crux-api"
+  spec.homepage = "https://rubygems.org/gems/crux_api"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/ahojmetrics/crux-api"
-  spec.metadata["changelog_uri"] = "https://github.com/ahojmetrics/crux-api"
+  spec.metadata["changelog_uri"] = "https://github.com/ahojmetrics/crux-api/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
