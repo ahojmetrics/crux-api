@@ -12,7 +12,7 @@ class CruxApi::Client
   def get(url)
     return {error: "No API key found"} unless @api_key
 
-    Rails.cache.fetch("#{cache_key(api_type: "rolling", url: url)}", expires_in: 12.hours) do
+    Rails.cache.fetch(cache_key(api_type: "rolling", url: url).to_s, expires_in: 12.hours) do
       puts "Uncached: Fetching from API"
 
       response = HTTParty.post(
@@ -29,7 +29,7 @@ class CruxApi::Client
   def history(url)
     return {error: "No API key found"} unless @api_key
 
-    Rails.cache.fetch("#{cache_key(api_type: "history", url: url)}", expires_in: 12.hours) do
+    Rails.cache.fetch(cache_key(api_type: "history", url: url).to_s, expires_in: 12.hours) do
       puts "Uncached: Fetching from API"
 
       response = HTTParty.post(
