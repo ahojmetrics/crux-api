@@ -35,7 +35,7 @@ class CruxApi::Client
       response = HTTParty.post(
         "#{API_URL}:queryHistoryRecord?key=#{@api_key}",
         query: {
-          url: url,
+          origin: url,
           formFactor: "PHONE"
         },
         headers: {
@@ -51,7 +51,7 @@ class CruxApi::Client
   private
 
   def cache_key(api_type:, url:)
-    url = url.gsub("https://", "").gsub("http://", "")
+    url = url.gsub("https://", "https_").gsub("http://", "http_")
     "crux_#{api_type}_api_#{url}"
   end
 end
